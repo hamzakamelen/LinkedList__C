@@ -18,7 +18,6 @@ void TraversalLinkedList(struct Node *ptr)
 }
 // ---------------------------------------
 
-
 // 1.Insert At Beginning
 struct Node *insertatBeginning(struct Node *head, int data)
 {
@@ -53,7 +52,7 @@ struct Node *InsertAtEnd(struct Node *head, int data)
     struct Node *newAdd = (struct Node *)malloc(sizeof(struct Node));
     struct Node *p = head;
     newAdd->next = head;
-    while (p->next!=NULL)
+    while (p->next != NULL)
     {
         p = p->next;
     }
@@ -65,13 +64,13 @@ struct Node *InsertAtEnd(struct Node *head, int data)
 // ---------------------------------------
 
 // 4. Insert After Node
-struct Node *InsertAfterNode(struct Node *head,struct Node *prevNode, int data)
+struct Node *InsertAfterNode(struct Node *head, struct Node *prevNode, int data)
 {
     struct Node *newAdd = (struct Node *)malloc(sizeof(struct Node));
     newAdd->data = data;
 
-    newAdd->next=prevNode->next;
-    prevNode->next =newAdd;
+    newAdd->next = prevNode->next;
+    prevNode->next = newAdd;
     return head;
 }
 // ---------------------------------------
@@ -111,26 +110,26 @@ int main()
     printf("------------------------------------------");
 
     // 1. Insert Element at Beginning
-    
+
     head = insertatBeginning(head, 54);
     // Print All Elements After Modification
     TraversalLinkedList(head);
     printf("------------------------------------------");
-    
+
     // 2.Insert at Index
-    
-    head = InsertAtIndex(head, 54,1);
+
+    head = InsertAtIndex(head, 54, 1);
     TraversalLinkedList(head);
     printf("------------------------------------------");
-        
+
     // 3.Insert at End
-    
-    head = InsertAtEnd(head,520);
+
+    head = InsertAtEnd(head, 520);
     TraversalLinkedList(head);
     printf("------------------------------------------");
     // 4. Insert After a Node
-    
-    head = InsertAfterNode(head,second,4000);
+
+    head = InsertAfterNode(head, second, 4000);
     TraversalLinkedList(head);
     printf("------------------------------------------");
     return 0;
