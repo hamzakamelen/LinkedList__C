@@ -46,7 +46,7 @@ struct Node *InsertAtIndex(struct Node *head, int data, int index)
 }
 // ---------------------------------------
 
-// 3. Insert At Index
+// 3. Insert At End
 struct Node *InsertAtEnd(struct Node *head, int data)
 {
     struct Node *newAdd = (struct Node *)malloc(sizeof(struct Node));
