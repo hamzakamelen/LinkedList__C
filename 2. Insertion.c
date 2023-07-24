@@ -51,7 +51,6 @@ struct Node *InsertAtEnd(struct Node *head, int data)
 {
     struct Node *newAdd = (struct Node *)malloc(sizeof(struct Node));
     struct Node *p = head;
-    newAdd->next = head;
     while (p->next != NULL)
     {
         p = p->next;
